@@ -82,3 +82,4 @@ footer { padding-bottom: 48px; font-size: 0.9rem; }
 .card .shot[src*="pillbox"] { aspect-ratio: auto; }
 .card .shot[src*="recipes"] { aspect-ratio: 16 / 9; }
 picture { display: block; }
+.card .note { font-size: 0.85rem; color: var(--muted); margin: 10px 0 0; }
