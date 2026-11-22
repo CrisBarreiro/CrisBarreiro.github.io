@@ -1,34 +1,85 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>CrisBarreiro</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-		<link rel="manifest" href="favicon/site.webmanifest">
-		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Website under construction!</h1>
-			<p>In the meantime, please check the footer for some other ways to get in touch or find out about me</p>
-    		</div>
-		</div>
-		<footer>
-    		<ul>
-        		<li><a href="mailto:CrisBarreiro@outlook.com">email</a></li>
-        		<li><a href="https://github.com/CrisBarreiro">GitHub</a></li>
-			<li><a href="https://linkedin.com/in/CrisBarreiro">LinkedIn</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cris Barreiro</title>
+  <meta name="description" content="Cris Barreiro, Android engineer at DuckDuckGo. Personal projects.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  <nav class="wrap">
+    <a class="brand" href="/">Cris Barreiro</a>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="https://recipes.crisbarreiro.com/" title="Private recipe site (sign-in required)">Recipes</a></li>
+    </ul>
+  </nav>
+
+  <header class="wrap hero">
+    <img class="avatar" src="resources/avatar.jpg" alt="Cris Barreiro" width="112" height="112">
+    <div>
+      <h1>Hi, I'm Cris.</h1>
+      <p class="lead">Software engineer working on Android at DuckDuckGo, and before that at Spotify. I'm a curious mind by nature, and I love learning things and putting them to use in everyday life: working out gluten-free cinnamon rolls after being told to go gluten-free, learning CAD to design and 3D print my own notebook cover, or building small, private apps for myself.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+
+    <section id="projects">
+      <h2>Personal projects</h2>
+      <div class="cards">
+        <article class="card featured">
+          <picture><source srcset="resources/projects/algorithmic-recipe-dark.jpg" media="(prefers-color-scheme: dark)"><img class="shot" src="resources/projects/algorithmic-recipe.jpg" alt="Fluffy American pancakes in both layouts: the algorithmic grid on a computer and the cookbook page on a phone" loading="lazy"></picture>
+          <p class="kicker">Open source · 4 Claude skills</p>
+          <h3>algorithmic-recipe: recipe skills for Claude</h3>
+          <p>A set of four Claude skills that turn any recipe, from a link, text or photo, into a page you can actually cook from, with each step right beside the ingredients it uses.</p>
+          <ul class="features">
+            <li><strong>Two layouts:</strong> a human-friendly cookbook page with weights, volumes and scaling, or an algorithmic grid that reads like a program.</li>
+            <li><strong>Gluten-free and dairy-free:</strong> converts a recipe using my own substitution rules, and either conversion feeds either layout.</li>
+            <li><strong>A recipe website:</strong> a site template that publishes the pages in English and Spanish, behind a login.</li>
+          </ul>
+          <ul class="tags"><li>Claude Code plugin</li><li>Cookbook</li><li>Algorithmic</li><li>Gluten-free</li><li>Dairy-free</li><li>Site template</li></ul>
+          <p class="links"><a href="https://github.com/CrisBarreiro/algorithmic-recipe">GitHub →</a></p>
+        </article>
+        <article class="card">
+          <picture><source srcset="resources/projects/recipes-dark.jpg" media="(prefers-color-scheme: dark)"><img class="shot" src="resources/projects/recipes.jpg" alt="The recipes site: tag filters and recipe cards with photos" loading="lazy"></picture>
+          <p class="kicker">Private site</p>
+          <h3>Recipes</h3>
+          <p>My own gluten-free friendly recipe collection, in English and Spanish, built with the algorithmic-recipe template and kept behind a login.</p>
+          <ul class="tags"><li>Cloudflare Pages</li><li>Cloudflare Access</li></ul>
+          <p class="links"><a href="https://recipes.crisbarreiro.com/">Open (sign-in required) →</a></p>
+        </article>
+        <article class="card">
+          <picture>
+            <source srcset="resources/projects/pillbox-dark.jpg" media="(prefers-color-scheme: dark)">
+            <img class="shot" src="resources/projects/pillbox.jpg" alt="Pillbox screens: Today's doses, weight and blood pressure charts, and the Health timeline" loading="lazy">
+          </picture>
+          <p class="kicker">Android app · written entirely by Claude</p>
+          <h3>Pillbox</h3>
+          <p>A private, offline medication tracker: weekly GLP-1 injections, daily tablets, supplements and as-needed painkillers. It shows what's due today, logs a dose in one tap, and keeps weight, blood pressure, side effects, appointments and health documents alongside, ready to share with a doctor as a PDF report. Nothing leaves the phone: no account, no cloud, no internet permission.</p>
+          <p>It's also a no-code experiment. All of its roughly 40,000 lines of Kotlin, its tests, CI and release builds were written by Claude agents in the cloud, from plain-language requests. I never wrote or reviewed a line of code: my only input was product direction, meaning what the app should do, which mock-up looked right and which pull request to merge.</p>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Offline</li><li>Agentic development</li></ul>
+        </article>
+      </div>
+      <p class="more">Older and smaller projects are on <a href="https://github.com/CrisBarreiro">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <ul>
+      <li><a href="mailto:CrisBarreiro@outlook.com">Email</a></li>
+      <li><a href="https://github.com/CrisBarreiro">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/CrisBarreiro">LinkedIn</a></li>
+    </ul>
+  </footer>
+</body>
 </html>
