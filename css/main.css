@@ -83,3 +83,11 @@ footer { padding-bottom: 48px; font-size: 0.9rem; }
 .card .shot[src*="recipes"] { aspect-ratio: 16 / 9; }
 picture { display: block; }
 .card .note { font-size: 0.85rem; color: var(--muted); margin: 10px 0 0; }
+
+/* Keep the original four-screen device captures fully visible. */
+.card .shot[src*="stronk.svg"],
+.card .shot[src*="pillbox-framed.svg"] {
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: var(--surface);
+}
